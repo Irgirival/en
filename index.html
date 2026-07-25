@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buku Rencana — Bahasa Inggris SD &amp; SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="binder">
+    <div class="binder-head">
+      <span class="binder-eyebrow">Buku Rencana Guru</span>
+      <h1>Bahasa<br>Inggris</h1>
+      <p class="binder-sub">SD &amp; SMP · Satu Tahun Ajaran</p>
+    </div>
+
+    <nav class="tabs" id="gradeTabs" aria-label="Pilih jenjang dan kelas"></nav>
+
+    <div class="binder-foot">
+      <button id="printYearBtn" class="ghost-btn" type="button">Cetak kalender tahunan</button>
+      <p class="hint">Dokumen ini untuk catatan pribadi guru — bukan untuk diakses murid.</p>
+    </div>
+  </aside>
+
+  <main class="content">
+    <header class="content-head">
+      <div class="content-head-top">
+        <div>
+          <p class="eyebrow" id="gradeLevelTag">SD</p>
+          <h2 id="gradeTitle">Pilih kelas di samping</h2>
+        </div>
+        <div class="semester-toggle" id="semesterToggle">
+          <button data-sem="1" class="sem-btn active" type="button">Semester 1</button>
+          <button data-sem="2" class="sem-btn" type="button">Semester 2</button>
+        </div>
+      </div>
+      <div class="search-row">
+        <input type="search" id="searchInput" placeholder="Cari tema minggu ini... (mis. 'animals', 'past tense')">
+        <span class="progress-tag" id="progressTag"></span>
+      </div>
+    </header>
+
+    <div id="monthsWrap" class="months-wrap"></div>
+  </main>
+
+</div>
+
+<div class="print-sheet" id="printSheet"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
